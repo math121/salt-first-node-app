@@ -12,14 +12,6 @@ then
   exit 1
 fi
 
-testresult=$(npm t --silent)
-if [[ "$testresult" != *"2 failing"* ]]
-then
-  echo "Tests verified - NOT OK"
-  echo $testresult
-  exit 1
-fi
-
 # cd back to where we came from
 cd - > /dev/null
 
